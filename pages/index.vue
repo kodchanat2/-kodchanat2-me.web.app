@@ -1,5 +1,8 @@
 <template>
-  <Tutorial/>
+  <div class="w-full min-h-screen">
+    HI
+    <h1>Lorem</h1>
+  </div>
 </template>
 
 <script lang="ts">
