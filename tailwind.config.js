@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   purge: [
     './components/**/*.{vue,js}',
     './layouts/**/*.vue',
@@ -19,5 +20,10 @@ module.exports = {
   variants: {
     animation: ['motion-safe', 'motion-reduce'],
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
+  daisyui: {
+    themes: false,
+  },
 };
