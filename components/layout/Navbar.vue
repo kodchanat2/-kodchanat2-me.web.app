@@ -2,13 +2,17 @@
   <div class="h-16 mb-4 w-screen z-20">
     <div class="fixed w-full">
       <div :class="{'shadow-lg': !isTop}" class="navbar mb-2 transition-shadow duration-300 bg-white dark:bg-dark relative">
-        <div class="flex-1 group font-semibold px-8 text-2xl flex justify-center md:justify-start cursor-pointer dark:text-orange" @click="toggleTheme">
-          J
-          <fa-layers>
-            <fa-icon :icon="['far', 'lightbulb']" transform="grow-4 down-2" class="text-orange dark:text-platinum group-hover:hidden" />
-            <fa-icon :icon="['fas', 'lightbulb']" transform="grow-4 down-2" class="text-dark dark:text-orange hidden group-hover:block" />
-          </fa-layers>
-          HN
+        <div class="flex-1 flex justify-center md:justify-start">
+          <div data-tip="toggle darkmode" class="md:tooltip md:tooltip-bottom">
+            <div class="group font-semibold px-8 text-2xl flex justify-center cursor-pointer dark:text-orange" @click="toggleTheme">
+              J
+              <fa-layers>
+                <fa-icon :icon="['far', 'lightbulb']" transform="grow-4 down-5" class="transition-opacity duration-500 text-orange dark:text-platinum opacity-100 group-hover:opacity-0" />
+                <fa-icon :icon="['fas', 'lightbulb']" transform="grow-4 down-5" class="transition-opacity duration-500 text-dark dark:text-orange opacity-0 group-hover:opacity-100" />
+              </fa-layers>
+              HN
+            </div>
+          </div>
         </div>
         <div class="flex-none hidden px-2 mx-2 md:flex">
           <div class="flex items-stretch">
@@ -49,6 +53,7 @@ export default class extends Vue {
   isTop: boolean = true;
 
   mounted() {
+    this.handleScroll()
     window.addEventListener('scroll', this.handleScroll);
   }
 
