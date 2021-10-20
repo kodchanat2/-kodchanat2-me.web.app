@@ -52,6 +52,7 @@ export default {
     suffix: true,
     icons: {
       solid: true,
+      regular: true,
     },
   },
 

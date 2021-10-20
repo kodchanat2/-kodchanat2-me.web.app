@@ -2,8 +2,13 @@
   <div class="h-16 mb-4 w-screen z-20">
     <div class="fixed w-full">
       <div :class="{'shadow-lg': !isTop}" class="navbar mb-2 transition-shadow duration-300 bg-white dark:bg-black relative">
-        <div class="flex-1 font-semibold px-8 text-2xl flex justify-center md:justify-start pointer-events-none">
-          JOHN
+        <div class="flex-1 group font-semibold px-8 text-2xl flex justify-center md:justify-start">
+          J
+          <fa-layers>
+            <fa-icon :icon="['far', 'lightbulb']" transform="grow-4 down-2" class="text-orange group-hover:hidden" />
+            <fa-icon :icon="['fas', 'lightbulb']" transform="grow-4 down-2" class="text-dark hidden group-hover:block" />
+          </fa-layers>
+          HN
         </div>
         <div class="flex-none hidden px-2 mx-2 md:flex">
           <div class="flex items-stretch">
@@ -50,7 +55,7 @@ export default class extends Vue {
   handleScroll(){
     this.isTop = window.pageYOffset <= 0
   }
-
+  
 
   scrollTop() {
     window.scroll({
