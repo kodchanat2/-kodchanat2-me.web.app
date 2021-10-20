@@ -1,7 +1,6 @@
 <template>
   <div class="w-full min-h-screen">
-    HI
-    <h1>Lorem</h1>
+    <SectionHero />
   </div>
 </template>
 
