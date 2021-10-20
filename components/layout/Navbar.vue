@@ -1,7 +1,7 @@
 <template>
   <div class="h-16 mb-4 w-screen z-20">
     <div class="fixed w-full">
-      <div class="navbar mb-2 shadow-lg bg-white dark:bg-black relative">
+      <div :class="{'shadow-lg': !isTop}" class="navbar mb-2 transition-shadow duration-300 bg-white dark:bg-black relative">
         <div class="flex-1 font-semibold px-8 text-2xl flex justify-center md:justify-start pointer-events-none">
           JOHN
         </div>
@@ -30,7 +30,7 @@
 import { Component, Vue } from 'nuxt-property-decorator';
 @Component
 export default class extends Vue {
-  menu = [
+  menu: Array<any> = [
     {
       title: 'About me',
     },
@@ -41,6 +41,16 @@ export default class extends Vue {
       title: 'Portfolio',
     },
   ]
+  isTop: boolean = true;
+
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(){
+    this.isTop = window.pageYOffset <= 0
+  }
+
 
   scrollTop() {
     window.scroll({
