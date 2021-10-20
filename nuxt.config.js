@@ -40,11 +40,20 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/composition-api/module',
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
+
+  fontawesome: {
+    component: 'fa',
+    suffix: true,
+    icons: {
+      solid: true,
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
