@@ -15,13 +15,13 @@
               backdrop-blur-none
               transition-all
               duration-500
-              group-hover:bg-gray-500
-              group-hover:bg-opacity-20
+              group-hover:bg-gray-700
+              group-hover:bg-opacity-70
               group-hover:backdrop-blur-sm
             " 
           />
           <figure>
-            <img :src="port.img">
+            <img :src="require(`@/assets/images/portfolio/${port.img}.jpg`)">
           </figure> 
           <div 
             class="
@@ -32,13 +32,15 @@
               group-hover:pointer-events-auto
             "
           >
-            <h3 class="card-title detail-card">{{port.title}}</h3> 
-            <p class="detail-card">{{port.description}}</p> 
-            <div v-if="port.link" class="card-actions last:mt-2">
-              <button class="btn btn-sm text-sm mx-auto detail-card">
-                visit site
-                <fa-icon icon="external-link-alt" class="ml-3 fa-sm"/>
-              </button>
+            <h3 class="card-title mb-1 detail-card">{{port.title}}</h3> 
+            <p class="detail-card text-sm">{{port.description}}</p> 
+            <div v-if="port.link" class="card-actions justify-center last:mt-2">
+              <a :href="port.link" target="_blank">
+                <button class="btn btn-sm text-sm mx-auto detail-card">
+                  visit site
+                  <fa-icon icon="external-link-alt" class="ml-3 fa-sm"/>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -53,15 +55,39 @@ import { Component, Vue } from 'nuxt-property-decorator';
 export default class extends Vue {
   ports = [
     {
-      title: 'lorem loremloremlorem',
-      description: 'lorem loremloremlorem ipsum ipsum ipsum ipsum ipsum ipsum',
-      img: 'https://via.placeholder.com/600x400',
-      link: '#',
+      title: 'PPS Program',
+      description: "Code editor/compiler for Computer Engineering's students to submit their codes",
+      img: 'pps',
     },
     {
-      title: 'lorem loremloremlorem',
-      description: 'lorem loremloremlorem ipsum ipsum ipsum ipsum ipsum ipsum',
-      img: 'https://via.placeholder.com/600x400',
+      title: 'Entertainment application in NSC 18',
+      description: "'Partylink' is multiplayer minigames you can play with your friends or family by your phone",
+      img: 'partylink',
+      link: 'http://fic.nectec.or.th/nsc18_Decisions',
+    },
+    {
+      title: '3D game with extension board',
+      description: "A Hackathon project that sync between 3D game and real-world IOT devices",
+      img: 'kidbright',
+      link: 'https://photos.app.goo.gl/atuwdLpfkQxDMFhZ6',
+    },
+    {
+      title: 'Global Game Jam 2019',
+      description: "'Planet DASH' is 3D game about spaceman travels across planets",
+      img: 'planetdash',
+      link: 'https://v3.globalgamejam.org/2019/games/planet-dash',
+    },
+    {
+      title: 'LENSOD.com',
+      description: "website for booking artists, I developed this dashboard page",
+      img: 'lensod',
+      link: 'https://www.lensod.com/',
+    },
+    {
+      title: 'MC browsing via LENSOD',
+      description: "page for find MC in Thailand, I developed this whole page",
+      img: 'lensod-mc',
+      link: 'https://www.lensod.com/browse/mc',
     },
   ]
 }

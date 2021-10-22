@@ -62,7 +62,7 @@ export default class extends Vue {
   }
 
   handleScroll(){
-    this.isTop = window.pageYOffset <= 0
+    this.isTop = window.pageYOffset <= 80
   }
 
   toggleTheme(){

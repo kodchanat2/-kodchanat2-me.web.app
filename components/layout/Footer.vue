@@ -1,9 +1,10 @@
 <template>
   <footer class="p-20 w-full footer bg-gray-500 bg-opacity-20 footer-center">
     <div class="grid grid-flow-col gap-4">
-      <a class="link link-hover" @click="scrollTop">scroll to top</a> 
+      <a class="link link-hover underline" @click="scrollTop">scroll to top</a> 
     </div> 
     <div>
+      contact me
       <div class="grid grid-flow-col gap-4">
         <a
           v-for="(contact, i) in contacts"

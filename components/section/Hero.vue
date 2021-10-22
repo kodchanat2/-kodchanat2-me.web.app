@@ -4,7 +4,7 @@
       <div class="mb-28 md:mb-0 md:col-span-2 flex justify-center items-center">
         <div class="avatar">
           <div class="w-56 h-56 md:w-60 md:h-60 lg:w-80 lg:h-80 mask mask-circle">
-            <img src="https://via.placeholder.com/600x400">
+            <img src="~/assets/images/profile.jpg">
           </div>
         </div> 
       </div>
