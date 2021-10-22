@@ -1,14 +1,14 @@
 <template>
   <div class="h-16 mb-4 w-full z-40">
-    <div class="fixed w-full overflow-hidden">
+    <div class="fixed w-full">
       <div :class="{'shadow-lg': !isTop}" class="navbar mb-2 transition-shadow duration-300 bg-platinum dark:bg-dark relative">
         <div class="flex-1 flex justify-center md:justify-start">
           <div data-tip="toggle darkmode" class="md:tooltip md:tooltip-bottom">
             <div class="group font-semibold px-8 text-2xl flex justify-center cursor-pointer dark:text-orange" @click="toggleTheme">
               J
               <fa-layers>
-                <fa-icon :icon="['far', 'lightbulb']" transform="grow-4 down-5" class="transition-opacity duration-500 text-orange dark:text-platinum opacity-100 group-hover:opacity-0" />
-                <fa-icon :icon="['fas', 'lightbulb']" transform="grow-4 down-5" class="transition-opacity duration-500 text-dark dark:text-orange opacity-0 group-hover:opacity-100" />
+                <fa-icon :icon="['far', 'moon']" transform="shrink-2 down-2" class="transition-opacity duration-500 text-orange dark:text-platinum opacity-100 group-hover:opacity-0" />
+                <fa-icon :icon="['fas', 'moon']" transform="shrink-2 down-2" class="transition-opacity duration-500 text-dark dark:text-orange opacity-0 group-hover:opacity-100" />
               </fa-layers>
               HN
             </div>
