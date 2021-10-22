@@ -27,9 +27,19 @@
           </div>
         </div> 
         <div class="flex-none absolute right-4 md:hidden">
-          <button class="btn btn-square btn-ghost">
-            v
-          </button>
+          <div class="dropdown dropdown-end">
+            <button tabindex="0" class="btn btn-square btn-ghost">
+              <fa-icon icon="bars" size="2x" />
+            </button>
+            <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-platinum dark:bg-dark rounded-box w-52 z-20">
+              <li
+                v-for="(menuItem, i) in menu"
+                :key="i"
+              >
+                <a @click="scrollId(menuItem.link)">{{menuItem.title}}</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
