@@ -10,6 +10,7 @@
           v-for="(contact, i) in contacts"
           :key="i"
           class="hover:shadow-lg"
+          :href="contact.link"
         >
           <fa-icon :icon="contact.icon" size="3x"  />
         </a>
@@ -28,15 +29,15 @@ export default class extends Vue {
   contacts = [
     {
       icon: this.facebook,
-      link: '#'
+      link: 'https://www.facebook.com/kodchanat2/'
     },
     {
       icon: this.github,
-      link: '#'
+      link: 'https://github.com/kodchanat2'
     },
     {
       icon: this.linkedIn,
-      link: '#'
+      link: 'https://www.linkedin.com/in/kodchanat2'
     },
   ]
   isTop: boolean = true;
