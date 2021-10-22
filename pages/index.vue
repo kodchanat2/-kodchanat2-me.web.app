@@ -2,6 +2,7 @@
   <div class="w-full min-h-screen">
     <SectionHero />
     <SectionProfile />
+    <SectionSkills />
   </div>
 </template>
 
