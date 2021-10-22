@@ -1,7 +1,7 @@
 <template>
-  <div class="h-16 mb-4 w-screen z-20">
-    <div class="fixed w-full">
-      <div :class="{'shadow-lg': !isTop}" class="navbar mb-2 transition-shadow duration-300 bg-white dark:bg-dark relative">
+  <div class="h-16 mb-4 w-full z-40">
+    <div class="fixed w-full overflow-hidden">
+      <div :class="{'shadow-lg': !isTop}" class="navbar mb-2 transition-shadow duration-300 bg-platinum dark:bg-dark relative">
         <div class="flex-1 flex justify-center md:justify-start">
           <div data-tip="toggle darkmode" class="md:tooltip md:tooltip-bottom">
             <div class="group font-semibold px-8 text-2xl flex justify-center cursor-pointer dark:text-orange" @click="toggleTheme">
@@ -20,6 +20,7 @@
               class="btn btn-ghost btn-sm rounded-btn"
               v-for="(menuItem, i) in menu"
               :key="i"
+              @click="scrollId(menuItem.link)"
             >
               {{menuItem.title}}
             </a> 
@@ -41,13 +42,16 @@ import { Component, Vue } from 'nuxt-property-decorator';
 export default class extends Vue {
   menu: Array<any> = [
     {
-      title: 'About me',
+      title: 'Profile',
+      link: '#profile',
     },
     {
       title: 'Skills',
+      link: '#skills',
     },
     {
       title: 'Portfolio',
+      link: '#portfolio',
     },
   ]
   isTop: boolean = true;
@@ -65,10 +69,10 @@ export default class extends Vue {
     this.$store.commit("layouts/toggleDarkMode");
   }
 
-  scrollTop() {
-    window.scroll({
+  scrollId = (hash: string) => {
+    let elem = document.querySelector(hash);
+    elem?.scrollIntoView({
       behavior: 'smooth',
-      top: 0,
     });
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-4xl mx-auto py-24 text-center">
+  <div id="portfolio" class="max-w-4xl mx-auto py-24 text-center">
     <h2 class="font-semibold text-4xl uppercase mb-4"> Portfolio </h2>
     <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 px-4 md:px-0">
       <div 

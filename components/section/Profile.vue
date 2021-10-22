@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-500 bg-opacity-20 min-h-screen py-24 text-center">
+  <div id="profile" class="bg-gray-500 bg-opacity-20 min-h-screen py-24 text-center">
     <h2 class="font-semibold text-4xl uppercase"> Profile </h2>
     <p class="max-w-xl mx-auto px-4 my-4 text-sm text-justify" v-html="about"></p>
     <div class="flex justify-center">

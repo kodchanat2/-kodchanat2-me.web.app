@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-lg mx-auto min-h-screen py-24 text-center">
-    <h2 class="font-semibold text-4xl uppercase"> Skills </h2>
+  <div id="skills" class="py-24 pb-16  text-center">
+    <h2 class="font-semibold text-4xl uppercase mb-4"> Skills </h2>
     <div class="flex justify-center">
       <div class="tabs flex-nowrap overflow-x-auto px-4">
         <a 
@@ -14,7 +14,7 @@
         </a> 
       </div>
     </div>
-    <div class="w-full px-4 bg-gray-400 bg-opacity-20">
+    <div class="max-w-lg mx-auto p-4 pb-8 bg-gray-400 bg-opacity-20">
       <ul class="list-disc list-inside">
         <li
           v-for="item in skills[selected].list"
