@@ -69,6 +69,7 @@ export default class extends Vue {
         'Bootstrap',
         'Ant Design',
         'Tailwind CSS',
+        'Font Awesome',
         'LINE LIFF',
         'LINE messaging API',
       ]
