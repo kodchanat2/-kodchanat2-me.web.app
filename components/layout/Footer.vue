@@ -4,7 +4,7 @@
       <a class="link link-hover underline" @click="scrollTop">scroll to top</a> 
     </div> 
     <div>
-      contact me
+      Contact me
       <div class="grid grid-flow-col gap-4">
         <a
           v-for="(contact, i) in contacts"
@@ -18,6 +18,7 @@
     </div> 
     <div>
       <p>Copyright © 2021 - All right reserved by Kodchanat2</p>
+      <p class="font-light text-opacity-50">Last Update: 25 October, 2021</p>
     </div>
   </footer>
 </template>
