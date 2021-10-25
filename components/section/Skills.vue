@@ -4,8 +4,12 @@
     <div class="flex justify-center w-full shadow-xl">
       <div class="tabs flex-nowrap overflow-x-auto -mb-px px-4">
         <a 
-          class="tab tab-bordered whitespace-nowrap font-medium dark:text-platinum"
-          :class="selected==i ? 'tab-active': 'border-transparent'"
+          class="
+            tab tab-bordered 
+            whitespace-nowrap 
+            font-medium 
+          "
+          :class="selected==i ? 'tab-active dark:text-white dark:border-platinum': 'border-transparent dark:text-gray-400'"
           v-for="(skill, i) in skills"
           :key="i"
           @click="selected=i"
@@ -14,7 +18,7 @@
         </a> 
       </div>
     </div>
-    <div class="p-4 pb-8 bg-gray-400 bg-opacity-20">
+    <div class="p-4 pb-8 bg-gray-400 bg-opacity-20 rounded-b-box">
       <ul class="list-inside">
         <li
           v-for="item in skills[selected].list"

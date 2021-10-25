@@ -17,7 +17,7 @@
         <div class="flex-none hidden px-2 mx-2 md:flex">
           <div class="flex items-stretch">
             <a 
-              class="btn btn-ghost btn-sm rounded-btn"
+              class="btn btn-ghost btn-sm rounded-btn dark:hover:bg-gray-600"
               v-for="(menuItem, i) in menu"
               :key="i"
               @click="scrollId(menuItem.link)"

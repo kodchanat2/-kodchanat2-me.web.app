@@ -9,7 +9,7 @@
         <a
           v-for="(contact, i) in contacts"
           :key="i"
-          class="hover:shadow-lg"
+          class="hover:text-black dark:hover:text-white"
           :href="contact.link"
         >
           <fa-icon :icon="contact.icon" size="3x"  />
