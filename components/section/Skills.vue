@@ -1,7 +1,7 @@
 <template>
-  <div id="skills" class="py-24 pb-16 max-w-lg mx-auto text-center">
-    <h2 class="font-semibold text-4xl uppercase mb-4"> Skills </h2>
-    <div data-aos="fade-up" data-aos-once="true" class="w-full">
+  <div id="skills" class="py-24 pb-16 max-w-lg mx-auto">
+    <div data-aos="fade-up" data-aos-once="true" class="w-full text-center">
+      <h2 class="font-semibold text-4xl uppercase mb-4"> Skills </h2>
       <div class="flex justify-center w-full shadow-xl">
         <div class="tabs flex-nowrap overflow-x-auto -mb-px px-4">
           <a 
