@@ -6,7 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "nuxt generate && firebase deploy"
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.29.3",
