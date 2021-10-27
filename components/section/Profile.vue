@@ -7,6 +7,8 @@
         <div class="border-2-2 absolute border-dashed border-dark mt-10 dark:border-platinum h-full border left-14"></div>
         <div 
           class="mb-8 flex justify-between w-full"
+          data-aos="zoom-out-left"
+          data-aos-once="true"
           v-for="(event, i) in timeline"
           :key="i"
         >

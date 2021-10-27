@@ -1,5 +1,5 @@
 <template>
-  <div class="md:max-w-2xl lg:max-w-4xl mx-auto -mt-16 min-h-screen flex items-center justify-center">
+  <div data-aos="fade-up" data-aos-duration="1000" class="md:max-w-2xl lg:max-w-4xl mx-auto -mt-16 min-h-screen flex items-center justify-center">
     <div class="grid grid-cols-1 md:grid-cols-5">
       <div class="mb-28 md:mb-0 md:col-span-2 flex justify-center items-center">
         <div class="avatar">
@@ -9,7 +9,7 @@
         </div> 
       </div>
 
-      <div class="md:col-span-3 flex justify-center items-center">
+      <div data-aos="fade-right" data-aos-delay="600" class="md:col-span-3 flex justify-center items-center">
         <h1 class="-ml-5 font-semibold pointer-events-none">
           <fa-layers class="pb-24 text-sm md:text-base lg:text-xl flex">
             <fa-layers-text transform="grow-16 up-70 left-60" class="font-medium whitespace-nowrap" value="Hi, I am" />

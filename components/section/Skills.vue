@@ -1,32 +1,34 @@
 <template>
   <div id="skills" class="py-24 pb-16 max-w-lg mx-auto text-center">
     <h2 class="font-semibold text-4xl uppercase mb-4"> Skills </h2>
-    <div class="flex justify-center w-full shadow-xl">
-      <div class="tabs flex-nowrap overflow-x-auto -mb-px px-4">
-        <a 
-          class="
-            tab tab-bordered 
-            whitespace-nowrap 
-            font-medium 
-          "
-          :class="selected==i ? 'tab-active dark:text-white dark:border-platinum': 'border-transparent dark:text-gray-400'"
-          v-for="(skill, i) in skills"
-          :key="i"
-          @click="selected=i"
-        >
-          {{skill.title}}
-        </a> 
+    <div data-aos="fade-up" data-aos-once="true" class="w-full">
+      <div class="flex justify-center w-full shadow-xl">
+        <div class="tabs flex-nowrap overflow-x-auto -mb-px px-4">
+          <a 
+            class="
+              tab tab-bordered 
+              whitespace-nowrap 
+              font-medium 
+            "
+            :class="selected==i ? 'tab-active dark:text-white dark:border-platinum': 'border-transparent dark:text-gray-400'"
+            v-for="(skill, i) in skills"
+            :key="i"
+            @click="selected=i"
+          >
+            {{skill.title}}
+          </a> 
+        </div>
       </div>
-    </div>
-    <div class="p-4 pb-8 bg-gray-400 bg-opacity-20 rounded-b-box">
-      <ul class="list-inside">
-        <li
-          v-for="item in skills[selected].list"
-          :key="item"
-        >
-          {{item}}
-        </li>
-      </ul>
+      <div class="p-4 pb-8 bg-gray-400 bg-opacity-20 rounded-b-box">
+        <ul class="list-inside">
+          <li
+            v-for="item in skills[selected].list"
+            :key="item"
+          >
+            {{item}}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>

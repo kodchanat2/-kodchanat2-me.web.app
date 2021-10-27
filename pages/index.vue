@@ -1,9 +1,9 @@
 <template>
   <div class="w-full min-h-screen">
-    <SectionHero />
-    <SectionProfile />
-    <SectionSkills />
-    <SectionPortfolio />
+    <SectionHero/>
+    <SectionProfile/>
+    <SectionSkills/>
+    <SectionPortfolio/>
   </div>
 </template>
 
